@@ -3,11 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Deepfake Video Detector(prototype)</title>
-=======
     <title>Deepfake Video Detector</title>
->>>>>>> efd59e725f9e39b09f5d4a16eca3ad896c9cd728
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -17,11 +13,7 @@
         body {
             font-family: 'Inter', sans-serif;
         }
-<<<<<<< HEAD
         /* Used Custom loading animation */
-=======
-        /* Custom loading animation */
->>>>>>> efd59e725f9e39b09f5d4a16eca3ad896c9cd728
         .loading-spinner {
             border: 4px solid #e5e7eb;
             border-top: 4px solid #3b82f6;
@@ -41,11 +33,7 @@
     <script type="text/babel">
         const { useState, useRef, useEffect } = React;
 
-<<<<<<< HEAD
         // Icon Components 
-=======
-        // Icon Components (simplified versions)
->>>>>>> efd59e725f9e39b09f5d4a16eca3ad896c9cd728
         const Camera = ({ size = 24, className = "" }) => (
             <svg width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/>
@@ -82,11 +70,7 @@
             </svg>
         );
 
-<<<<<<< HEAD
         // My main app
-=======
-        // Main App Component
->>>>>>> efd59e725f9e39b09f5d4a16eca3ad896c9cd728
         function DeepfakeDetector() {
             const [videoSrc, setVideoSrc] = useState(null);
             const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -98,11 +82,7 @@
             const webcamRef = useRef(null);
             const mediaStreamRef = useRef(null);
 
-<<<<<<< HEAD
             // This should Handle file upload
-=======
-            // Handle file upload
->>>>>>> efd59e725f9e39b09f5d4a16eca3ad896c9cd728
             const handleFileUpload = (event) => {
                 const file = event.target.files[0];
                 if (file) {
@@ -112,11 +92,7 @@
                 }
             };
 
-<<<<<<< HEAD
             // Toggle webcam for my whoever is using it
-=======
-            // Toggle webcam
->>>>>>> efd59e725f9e39b09f5d4a16eca3ad896c9cd728
             const toggleWebcam = async () => {
                 if (webcamActive) {
                     if (mediaStreamRef.current) {
@@ -138,19 +114,11 @@
                 }
             };
 
-<<<<<<< HEAD
             // Analyze video for deepfake signs{}
             const analyzeVideo = () => {
                 setIsAnalyzing(true);
                 
                 // Simulate analysis with timeout - will use ML models here when i launch my app
-=======
-            // Analyze video for deepfake signs
-            const analyzeVideo = () => {
-                setIsAnalyzing(true);
-                
-                // Simulate analysis with timeout - in a real app, you'd use ML models here
->>>>>>> efd59e725f9e39b09f5d4a16eca3ad896c9cd728
                 setTimeout(() => {
                     const fakeScores = {
                         faceInconsistencies: Math.random() * 100,
@@ -264,11 +232,7 @@
                                     <div className="text-gray-500 text-center p-6">
                                         <Video size={48} className="mx-auto mb-4 text-gray-400" />
                                         <p className="text-lg font-medium mb-2">No video selected</p>
-<<<<<<< HEAD
                                         <p className="text-sm">Upload a video file or enable webcam to begin analysis(random results until main launch)</p>
-=======
-                                        <p className="text-sm">Upload a video file or enable webcam to begin analysis</p>
->>>>>>> efd59e725f9e39b09f5d4a16eca3ad896c9cd728
                                     </div>
                                 )}
                             </div>
@@ -380,17 +344,13 @@
                     </main>
                     
                     <footer className="mt-8 text-center text-sm text-gray-500 bg-gradient-to-r from-blue-100 to-purple-100 rounded-lg py-4 shadow-md">
-    <p>Deepfake Detector • For educational purposes only</p>
+    <p>Deepfake Detector(prototype) • For educational purposes only</p>
 </footer>
                 </div>
             );
         }
 
-<<<<<<< HEAD
         // I used this to render the app
-=======
-        // Render the app
->>>>>>> efd59e725f9e39b09f5d4a16eca3ad896c9cd728
         ReactDOM.render(<DeepfakeDetector />, document.getElementById('root'));
     </script>
 </body>
